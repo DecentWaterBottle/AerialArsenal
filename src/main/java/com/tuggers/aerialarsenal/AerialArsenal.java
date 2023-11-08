@@ -2,6 +2,7 @@ package com.tuggers.aerialarsenal;
 
 import com.mojang.logging.LogUtils;
 import com.tuggers.aerialarsenal.init.ModCreativeModeTabs;
+import com.tuggers.aerialarsenal.init.ModEntities;
 import com.tuggers.aerialarsenal.init.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,13 +32,6 @@ public class AerialArsenal
     public static final String MODID = "aerialarsenal";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-
 
     public AerialArsenal()
     {
@@ -45,6 +39,7 @@ public class AerialArsenal
 
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModEntities.register(modEventBus);
 
 
         // Register the commonSetup method for modloading
