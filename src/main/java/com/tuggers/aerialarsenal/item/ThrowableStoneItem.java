@@ -26,7 +26,7 @@ public class ThrowableStoneItem extends Item {
         if (!pLevel.isClientSide) {
             ThrowableStoneEntity throwableStone = new ThrowableStoneEntity(pPlayer, pLevel);
             throwableStone.setItem(itemStack);
-            throwableStone.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0f, 1.5F, 1.0F);
+            throwableStone.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0f, 1.8F, 1.0F);
             pLevel.addFreshEntity(throwableStone);
 
             if (!pPlayer.isCreative()) {
