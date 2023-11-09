@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import com.tuggers.aerialarsenal.init.ModCreativeModeTabs;
 import com.tuggers.aerialarsenal.init.ModEntities;
 import com.tuggers.aerialarsenal.init.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -79,7 +81,7 @@ public class AerialArsenal
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.THROWABLE_STONE_ENTITY.get(), ThrownItemRenderer::new);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.tuggers.aerialarsenal.init;
 
 import com.tuggers.aerialarsenal.AerialArsenal;
+import com.tuggers.aerialarsenal.item.ThrowableStoneItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,6 +15,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> THROWABLE_STONE = ITEMS.register("throwable_stone",
+            () -> new ThrowableStoneItem(new Item.Properties()));
 
 
 

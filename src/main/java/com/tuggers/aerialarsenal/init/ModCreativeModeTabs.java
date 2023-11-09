@@ -15,10 +15,11 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AerialArsenal.MODID);
 
     public static final RegistryObject<CreativeModeTab> AERIAL_ARSENAL_TAB = CREATIVE_MODE_TABS.register("aerial_arsenal_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAW_SAPPHIRE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.THROWABLE_STONE.get()))
                     .title(Component.translatable("creativetab.aerial_arsenal_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ModItems.THROWABLE_STONE.get());
                     })
                     .build());
 
