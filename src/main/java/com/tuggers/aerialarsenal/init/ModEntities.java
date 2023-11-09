@@ -24,10 +24,6 @@ public class ModEntities {
                     .sized(0.5f, 0.5f).build("throwable_stone_projectile")
     );
 
-//    public static final RegistryObject<EntityType<KnifeEntity>> KNIFE_ENTITY = ENTITY_TYPES.register(
-//            "knife_projectile", () -> EntityType.Builder.<KnifeEntity>of(KnifeEntity::new, MobCategory.MISC)
-//                    .sized(0.5f, 0.5f).build("knife_projectile")
-//    );
 
     public static final RegistryObject<EntityType<KnifeEntity>> KNIFE_ENTITY = ENTITY_TYPES.register(
             "knife_projectile",

@@ -21,8 +21,6 @@ public class KnifeEntity extends AbstractArrow {
 
     public KnifeEntity(EntityType<? extends AbstractArrow> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        System.out.println("NON TIERED CONSTRUCTOR");
-        System.out.println("TIER: " + entityTier);
 
     }
 
@@ -46,8 +44,6 @@ public class KnifeEntity extends AbstractArrow {
     public KnifeEntity(LivingEntity pShooter, Level pLevel, Tiers tier) {
         super(ModEntities.KNIFE_ENTITY.get(), pShooter, pLevel);
         this.entityTier = tier;
-        System.out.println("TIERED CONSTRUCTOR RUN");
-        System.out.println("TIER: " + entityTier);
     }
 
     public KnifeEntity(Level world, Tiers wood) {
