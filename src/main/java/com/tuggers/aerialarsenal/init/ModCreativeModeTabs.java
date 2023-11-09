@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         pOutput.accept(ModItems.THROWABLE_STONE.get());
+                        pOutput.accept(ModItems.WOODEN_KNIFE.get());
                     })
                     .build());
 
