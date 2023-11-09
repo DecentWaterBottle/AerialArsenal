@@ -22,7 +22,7 @@ public class ModItems {
             () -> new ThrowableStoneItem(new Item.Properties()));
 
     public static final RegistryObject<Item> WOODEN_KNIFE = ITEMS.register("wooden_knife",
-            () -> new KnifeItem(Tiers.WOOD, new Item.Properties(), 2));
+            () -> new KnifeItem(Tiers.WOOD, new Item.Properties().stacksTo(64), 2));
 
 
 
