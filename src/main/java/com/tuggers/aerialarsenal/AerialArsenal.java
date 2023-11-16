@@ -83,7 +83,8 @@ public class AerialArsenal
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.THROWABLE_STONE_ENTITY.get(), ThrownItemRenderer::new);
-            EntityRenderers.register(ModEntities.KNIFE_ENTITY.get(), KnifeRenderer::new);
+            EntityRenderers.register(ModEntities.WOODEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
+            EntityRenderers.register(ModEntities.STONE_KNIFE_ENTITY.get(), KnifeRenderer::new);
         }
     }
 }

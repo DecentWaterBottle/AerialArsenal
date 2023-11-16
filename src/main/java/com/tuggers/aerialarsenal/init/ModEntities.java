@@ -25,11 +25,18 @@ public class ModEntities {
     );
 
 
-    public static final RegistryObject<EntityType<KnifeEntity>> KNIFE_ENTITY = ENTITY_TYPES.register(
-            "knife_projectile",
-            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(world, Tiers.WOOD), MobCategory.MISC)
+    public static final RegistryObject<EntityType<KnifeEntity>> WOODEN_KNIFE_ENTITY = ENTITY_TYPES.register(
+            "wooden_knife_projectile",
+            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.WOOD), MobCategory.MISC)
                     .sized(0.5f, 0.5f)
-                    .build("knife_projectile")
+                    .build("wooden_knife_projectile")
+    );
+
+    public static final RegistryObject<EntityType<KnifeEntity>> STONE_KNIFE_ENTITY = ENTITY_TYPES.register(
+            "stone_knife_projectile",
+            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.STONE), MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .build("stone_knife_projectile")
     );
 
     public static void register(IEventBus eventBus) {
