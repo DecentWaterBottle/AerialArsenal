@@ -82,9 +82,7 @@ public class KnifeEntity extends AbstractArrow {
 
         super.onHitEntity(pResult);
 
-        if (this.pickup == AbstractArrow.Pickup.ALLOWED) {
-            if (!this.level().isClientSide) {
-
+        if (this.pickup == AbstractArrow.Pickup.ALLOWED && !this.level().isClientSide) {
                 KnifeEntity knifeEntity = switch (entityTier) {
                     case WOOD ->                new KnifeEntity(ModEntities.WOODEN_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case STONE ->               new KnifeEntity(ModEntities.STONE_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
@@ -99,9 +97,8 @@ public class KnifeEntity extends AbstractArrow {
 
                 knifeEntity.setYRot((float)degrees + 90.0F);
                 this.level().addFreshEntity(knifeEntity);
+                this.discard();
             }
-        }
-
     }
 
 
