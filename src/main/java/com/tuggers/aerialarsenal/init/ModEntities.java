@@ -39,6 +39,13 @@ public class ModEntities {
                     .build("stone_knife_projectile")
     );
 
+    public static final RegistryObject<EntityType<KnifeEntity>> IRON_KNIFE_ENTITY = ENTITY_TYPES.register(
+            "iron_knife_projectile",
+            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.IRON), MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .build("iron_knife_projectile")
+    );
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

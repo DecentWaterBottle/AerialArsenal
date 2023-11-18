@@ -85,6 +85,7 @@ public class AerialArsenal
             EntityRenderers.register(ModEntities.THROWABLE_STONE_ENTITY.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.WOODEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.STONE_KNIFE_ENTITY.get(), KnifeRenderer::new);
+            EntityRenderers.register(ModEntities.IRON_KNIFE_ENTITY.get(), KnifeRenderer::new);
         }
     }
 }
