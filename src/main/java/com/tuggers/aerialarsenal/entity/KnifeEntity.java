@@ -1,9 +1,12 @@
 package com.tuggers.aerialarsenal.entity;
 
+import com.tuggers.aerialarsenal.AerialArsenal;
+import com.tuggers.aerialarsenal.helper.TierTextureMapper;
 import com.tuggers.aerialarsenal.init.ModEntities;
 import com.tuggers.aerialarsenal.init.ModItems;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -18,6 +21,10 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.EnumMap;
+import java.util.Map;
 
 public class KnifeEntity extends AbstractArrow {
     public Tiers entityTier;
@@ -57,17 +64,13 @@ public class KnifeEntity extends AbstractArrow {
         return this.clientSideRotation;
     }
 
-
     @Override
     protected ItemStack getPickupItem() {
-        System.out.println("TIER: " + entityTier);
-        switch(entityTier){
-            case WOOD:
-                return new ItemStack(ModItems.WOODEN_KNIFE.get());
-            case STONE:
-                return new ItemStack(ModItems.STONE_KNIFE.get());
+        String itemName = TierTextureMapper.getTextureName(entityTier) + "_knife";
+        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(AerialArsenal.MODID, itemName));
+        if (item != null) {
+            return new ItemStack(item);
         }
-
         return null;
     }
 
