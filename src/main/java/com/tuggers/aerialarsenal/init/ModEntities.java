@@ -49,6 +49,10 @@ public class ModEntities {
             "golden_knife_projectile", Tiers.GOLD
     );
 
+    public static final RegistryObject<EntityType<KnifeEntity>> DIAMOND_KNIFE_ENTITY = registerKnifeEntity(
+            "diamond_knife_projectile", Tiers.DIAMOND
+    );
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

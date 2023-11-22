@@ -33,6 +33,9 @@ public class ModItems {
     public static final RegistryObject<Item> GOLDEN_KNIFE = ITEMS.register("golden_knife",
             () -> new KnifeItem(ModEntities.GOLDEN_KNIFE_ENTITY, Tiers.GOLD, new Item.Properties(), 2));
 
+    public static final RegistryObject<Item> DIAMOND_KNIFE = ITEMS.register("diamond_knife",
+            () -> new KnifeItem(ModEntities.DIAMOND_KNIFE_ENTITY, Tiers.DIAMOND, new Item.Properties(), 2));
+
 
 
     public static void register(IEventBus eventBus) {

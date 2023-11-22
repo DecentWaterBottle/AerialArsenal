@@ -88,6 +88,7 @@ public class KnifeEntity extends AbstractArrow {
                     case STONE ->               new KnifeEntity(ModEntities.STONE_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case IRON ->               new KnifeEntity(ModEntities.IRON_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case GOLD ->               new KnifeEntity(ModEntities.GOLDEN_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
+                    case DIAMOND ->               new KnifeEntity(ModEntities.DIAMOND_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     default ->                  new KnifeEntity(ModEntities.STONE_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                 };
                 knifeEntity.pickup = Pickup.ALLOWED;
