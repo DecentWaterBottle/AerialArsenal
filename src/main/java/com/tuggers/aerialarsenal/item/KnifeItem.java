@@ -47,7 +47,6 @@ public class KnifeItem extends TieredItem {
                 SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.5F);
 
         if (!pLevel.isClientSide) {
-//            entityType = ModEntities.WOODEN_KNIFE_ENTITY.get();
             KnifeEntity knife = new KnifeEntity(entityType.get(), pPlayer, pLevel, (Tiers) getTier());
             knife.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0f, 1.7F, 0.5F);
             pLevel.addFreshEntity(knife);

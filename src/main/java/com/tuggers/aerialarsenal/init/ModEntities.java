@@ -19,38 +19,34 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AerialArsenal.MODID);
 
+    private static RegistryObject<EntityType<KnifeEntity>> registerKnifeEntity(String name, Tiers tier) {
+        return ENTITY_TYPES.register(
+                name,
+                () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, tier), MobCategory.MISC)
+                        .sized(0.5f, 0.5f)
+                        .build(name)
+        );
+    }
+
     public static final RegistryObject<EntityType<ThrowableStoneEntity>> THROWABLE_STONE_ENTITY = ENTITY_TYPES.register(
             "throwable_stone_projectile", () -> EntityType.Builder.<ThrowableStoneEntity>of(ThrowableStoneEntity::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).build("throwable_stone_projectile")
     );
 
-
-    public static final RegistryObject<EntityType<KnifeEntity>> WOODEN_KNIFE_ENTITY = ENTITY_TYPES.register(
-            "wooden_knife_projectile",
-            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.WOOD), MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
-                    .build("wooden_knife_projectile")
+    public static final RegistryObject<EntityType<KnifeEntity>> WOODEN_KNIFE_ENTITY = registerKnifeEntity(
+            "wooden_knife_projectile", Tiers.WOOD
     );
 
-    public static final RegistryObject<EntityType<KnifeEntity>> STONE_KNIFE_ENTITY = ENTITY_TYPES.register(
-            "stone_knife_projectile",
-            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.STONE), MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
-                    .build("stone_knife_projectile")
+    public static final RegistryObject<EntityType<KnifeEntity>> STONE_KNIFE_ENTITY = registerKnifeEntity(
+            "stone_knife_projectile", Tiers.STONE
     );
 
-    public static final RegistryObject<EntityType<KnifeEntity>> IRON_KNIFE_ENTITY = ENTITY_TYPES.register(
-            "iron_knife_projectile",
-            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.IRON), MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
-                    .build("iron_knife_projectile")
+    public static final RegistryObject<EntityType<KnifeEntity>> IRON_KNIFE_ENTITY = registerKnifeEntity(
+            "iron_knife_projectile", Tiers.IRON
     );
 
-    public static final RegistryObject<EntityType<KnifeEntity>> GOLDEN_KNIFE_ENTITY = ENTITY_TYPES.register(
-            "golden_knife_projectile",
-            () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, Tiers.GOLD), MobCategory.MISC)
-                    .sized(0.5f, 0.5f)
-                    .build("golden_knife_projectile")
+    public static final RegistryObject<EntityType<KnifeEntity>> GOLDEN_KNIFE_ENTITY = registerKnifeEntity(
+            "golden_knife_projectile", Tiers.GOLD
     );
 
     public static void register(IEventBus eventBus) {
