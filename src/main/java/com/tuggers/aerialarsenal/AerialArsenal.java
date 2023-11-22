@@ -88,6 +88,7 @@ public class AerialArsenal
             EntityRenderers.register(ModEntities.IRON_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.GOLDEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.DIAMOND_KNIFE_ENTITY.get(), KnifeRenderer::new);
+            EntityRenderers.register(ModEntities.NETHERITE_KNIFE_ENTITY.get(), KnifeRenderer::new);
         }
     }
 }

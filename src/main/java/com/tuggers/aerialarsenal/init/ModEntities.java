@@ -53,6 +53,10 @@ public class ModEntities {
             "diamond_knife_projectile", Tiers.DIAMOND
     );
 
+    public static final RegistryObject<EntityType<KnifeEntity>> NETHERITE_KNIFE_ENTITY = registerKnifeEntity(
+            "netherite_knife_projectile", Tiers.NETHERITE
+    );
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
