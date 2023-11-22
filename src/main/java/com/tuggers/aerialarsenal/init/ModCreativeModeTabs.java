@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WOODEN_KNIFE.get());
                         pOutput.accept(ModItems.STONE_KNIFE.get());
                         pOutput.accept(ModItems.IRON_KNIFE.get());
+                        pOutput.accept(ModItems.GOLDEN_KNIFE.get());
                     })
                     .build());
 
