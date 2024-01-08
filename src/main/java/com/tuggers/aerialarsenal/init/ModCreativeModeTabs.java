@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AerialArsenal.MODID);
 
     public static final RegistryObject<CreativeModeTab> AERIAL_ARSENAL_TAB = CREATIVE_MODE_TABS.register("aerial_arsenal_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.THROWABLE_STONE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DIAMOND_KNIFE.get()))
                     .title(Component.translatable("creativetab.aerial_arsenal_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.GOLDEN_KNIFE.get());
                         pOutput.accept(ModItems.DIAMOND_KNIFE.get());
                         pOutput.accept(ModItems.NETHERITE_KNIFE.get());
+                        pOutput.accept(ModItems.JAVELIN_SHAFT.get());
                     })
                     .build());
 

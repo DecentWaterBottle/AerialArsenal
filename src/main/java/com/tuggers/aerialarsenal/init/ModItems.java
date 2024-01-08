@@ -39,6 +39,9 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_KNIFE = ITEMS.register("netherite_knife",
             () -> new KnifeItem(ModEntities.NETHERITE_KNIFE_ENTITY, Tiers.NETHERITE, new Item.Properties(), 2));
 
+    public static final RegistryObject<Item> JAVELIN_SHAFT = ITEMS.register("javelin_shaft",
+            () -> new Item( new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
