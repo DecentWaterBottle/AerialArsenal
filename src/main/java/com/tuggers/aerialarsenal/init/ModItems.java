@@ -1,6 +1,7 @@
 package com.tuggers.aerialarsenal.init;
 
 import com.tuggers.aerialarsenal.AerialArsenal;
+import com.tuggers.aerialarsenal.item.JavelinItem;
 import com.tuggers.aerialarsenal.item.KnifeItem;
 import com.tuggers.aerialarsenal.item.ThrowableStoneItem;
 import net.minecraft.world.item.Item;
@@ -41,6 +42,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> JAVELIN_SHAFT = ITEMS.register("javelin_shaft",
             () -> new Item( new Item.Properties()));
+
+    public static final RegistryObject<Item> IRON_JAVELIN = ITEMS.register("iron_javelin",
+            () -> new JavelinItem(Tiers.IRON, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

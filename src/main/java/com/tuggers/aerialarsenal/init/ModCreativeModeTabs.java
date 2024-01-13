@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.DIAMOND_KNIFE.get());
                         pOutput.accept(ModItems.NETHERITE_KNIFE.get());
                         pOutput.accept(ModItems.JAVELIN_SHAFT.get());
+                        pOutput.accept(ModItems.IRON_JAVELIN.get());
                     })
                     .build());
 
