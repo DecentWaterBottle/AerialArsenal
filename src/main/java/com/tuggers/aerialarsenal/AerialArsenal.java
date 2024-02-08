@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.tuggers.aerialarsenal.init.ModCreativeModeTabs;
 import com.tuggers.aerialarsenal.init.ModEntities;
 import com.tuggers.aerialarsenal.init.ModItems;
+import com.tuggers.aerialarsenal.render.JavelinRenderer;
 import com.tuggers.aerialarsenal.render.KnifeRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
@@ -89,6 +90,7 @@ public class AerialArsenal
             EntityRenderers.register(ModEntities.GOLDEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.DIAMOND_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.NETHERITE_KNIFE_ENTITY.get(), KnifeRenderer::new);
+            EntityRenderers.register(ModEntities.IRON_JAVELIN_ENTITY.get(), JavelinRenderer::new);
         }
     }
 }

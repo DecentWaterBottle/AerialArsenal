@@ -1,6 +1,7 @@
 package com.tuggers.aerialarsenal.event;
 
 import com.tuggers.aerialarsenal.AerialArsenal;
+import com.tuggers.aerialarsenal.render.model.JavelinModel;
 import com.tuggers.aerialarsenal.render.model.KnifeModel;
 import com.tuggers.aerialarsenal.render.model.ModModelLayers;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -14,6 +15,7 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.KNIFE_LAYER, KnifeModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.JAVELIN_LAYER, JavelinModel::createBodyLayer);
 
     }
 }

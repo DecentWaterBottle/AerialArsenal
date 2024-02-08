@@ -1,6 +1,7 @@
 package com.tuggers.aerialarsenal.init;
 
 import com.tuggers.aerialarsenal.AerialArsenal;
+import com.tuggers.aerialarsenal.entity.JavelinEntity;
 import com.tuggers.aerialarsenal.entity.KnifeEntity;
 import com.tuggers.aerialarsenal.entity.ThrowableStoneEntity;
 import com.tuggers.aerialarsenal.item.ThrowableStoneItem;
@@ -23,6 +24,15 @@ public class ModEntities {
         return ENTITY_TYPES.register(
                 name,
                 () -> EntityType.Builder.<KnifeEntity>of((type, world) -> new KnifeEntity(type, world, tier), MobCategory.MISC)
+                        .sized(0.5f, 0.5f)
+                        .build(name)
+        );
+    }
+
+    private static RegistryObject<EntityType<JavelinEntity>> registerJavelinEntity(String name, Tiers tier) {
+        return ENTITY_TYPES.register(
+                name,
+                () -> EntityType.Builder.<JavelinEntity>of((type, world) -> new JavelinEntity(type, world, tier), MobCategory.MISC)
                         .sized(0.5f, 0.5f)
                         .build(name)
         );
@@ -55,6 +65,10 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<KnifeEntity>> NETHERITE_KNIFE_ENTITY = registerKnifeEntity(
             "netherite_knife_projectile", Tiers.NETHERITE
+    );
+
+    public static final RegistryObject<EntityType<JavelinEntity>> IRON_JAVELIN_ENTITY = registerJavelinEntity(
+            "iron_javelin_projectile", Tiers.IRON
     );
 
     public static void register(IEventBus eventBus) {
