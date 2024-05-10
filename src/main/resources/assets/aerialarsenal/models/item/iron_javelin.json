@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "aerialarsenal:item/iron_javelin"
-  }
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "aerialarsenal:item/iron_javelin",
+		"particle": "iron_javelin"
+	}
 }
