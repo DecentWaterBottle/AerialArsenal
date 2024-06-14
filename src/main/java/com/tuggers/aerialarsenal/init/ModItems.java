@@ -46,6 +46,9 @@ public class ModItems {
     public static final RegistryObject<Item> IRON_JAVELIN = ITEMS.register("iron_javelin",
             () -> new JavelinItem(ModEntities.IRON_JAVELIN_ENTITY, Tiers.IRON, new Item.Properties(), 4));
 
+    public static final RegistryObject<Item> GOLDEN_JAVELIN = ITEMS.register("golden_javelin",
+            () -> new JavelinItem(ModEntities.GOLDEN_JAVELIN_ENTITY, Tiers.GOLD, new Item.Properties(), 4));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

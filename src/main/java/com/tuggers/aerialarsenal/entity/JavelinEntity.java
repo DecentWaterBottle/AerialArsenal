@@ -79,7 +79,7 @@ public class JavelinEntity extends AbstractArrow {
                     case WOOD ->                new JavelinEntity(ModEntities.WOODEN_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case STONE ->               new JavelinEntity(ModEntities.STONE_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case IRON ->               new JavelinEntity(ModEntities.IRON_JAVELIN_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
-                    case GOLD ->               new JavelinEntity(ModEntities.GOLDEN_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
+                    case GOLD ->               new JavelinEntity(ModEntities.GOLDEN_JAVELIN_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case DIAMOND ->               new JavelinEntity(ModEntities.DIAMOND_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                     case NETHERITE ->               new JavelinEntity(ModEntities.NETHERITE_KNIFE_ENTITY.get(), this.getX(), this.getY(), this.getZ(), this.level(), entityTier);
                 };

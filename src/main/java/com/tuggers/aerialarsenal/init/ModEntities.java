@@ -71,6 +71,10 @@ public class ModEntities {
             "iron_javelin_projectile", Tiers.IRON
     );
 
+    public static final RegistryObject<EntityType<JavelinEntity>> GOLDEN_JAVELIN_ENTITY = registerJavelinEntity(
+            "golden_javelin_projectile", Tiers.GOLD
+    );
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
