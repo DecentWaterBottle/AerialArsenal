@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.IRON_JAVELIN.get());
                         pOutput.accept(ModItems.GOLDEN_JAVELIN.get());
                         pOutput.accept(ModItems.WOODEN_JAVELIN.get());
+                        pOutput.accept(ModItems.STONE_JAVELIN.get());
                     })
                     .build());
 

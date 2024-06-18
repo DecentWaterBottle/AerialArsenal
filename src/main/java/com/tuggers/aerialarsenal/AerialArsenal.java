@@ -93,6 +93,7 @@ public class AerialArsenal
             EntityRenderers.register(ModEntities.IRON_JAVELIN_ENTITY.get(), JavelinRenderer::new);
             EntityRenderers.register(ModEntities.GOLDEN_JAVELIN_ENTITY.get(), JavelinRenderer::new);
             EntityRenderers.register(ModEntities.WOODEN_JAVELIN_ENTITY.get(), JavelinRenderer::new);
+            EntityRenderers.register(ModEntities.STONE_JAVELIN_ENTITY.get(), JavelinRenderer::new);
         }
     }
 }

@@ -82,6 +82,10 @@ public class ModEntities {
             "wooden_javelin_projectile", Tiers.WOOD
     );
 
+    public static final RegistryObject<EntityType<JavelinEntity>> STONE_JAVELIN_ENTITY = registerJavelinEntity(
+            "stone_javelin_projectile", Tiers.STONE
+    );
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
