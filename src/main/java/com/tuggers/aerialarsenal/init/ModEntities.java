@@ -43,6 +43,8 @@ public class ModEntities {
                     .sized(0.5f, 0.5f).build("throwable_stone_projectile")
     );
 
+    //region Knife Entities
+
     public static final RegistryObject<EntityType<KnifeEntity>> WOODEN_KNIFE_ENTITY = registerKnifeEntity(
             "wooden_knife_projectile", Tiers.WOOD
     );
@@ -66,6 +68,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<KnifeEntity>> NETHERITE_KNIFE_ENTITY = registerKnifeEntity(
             "netherite_knife_projectile", Tiers.NETHERITE
     );
+    //endregion
 
     public static final RegistryObject<EntityType<JavelinEntity>> IRON_JAVELIN_ENTITY = registerJavelinEntity(
             "iron_javelin_projectile", Tiers.IRON
@@ -73,6 +76,10 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<JavelinEntity>> GOLDEN_JAVELIN_ENTITY = registerJavelinEntity(
             "golden_javelin_projectile", Tiers.GOLD
+    );
+
+    public static final RegistryObject<EntityType<JavelinEntity>> WOODEN_JAVELIN_ENTITY = registerJavelinEntity(
+            "wooden_javelin_projectile", Tiers.WOOD
     );
 
     public static void register(IEventBus eventBus) {
