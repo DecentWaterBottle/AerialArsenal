@@ -70,6 +70,15 @@ public class ModEntities {
     );
     //endregion
 
+    //region Javelin Entities
+    public static final RegistryObject<EntityType<JavelinEntity>> WOODEN_JAVELIN_ENTITY = registerJavelinEntity(
+            "wooden_javelin_projectile", Tiers.WOOD
+    );
+
+    public static final RegistryObject<EntityType<JavelinEntity>> STONE_JAVELIN_ENTITY = registerJavelinEntity(
+            "stone_javelin_projectile", Tiers.STONE
+    );
+
     public static final RegistryObject<EntityType<JavelinEntity>> IRON_JAVELIN_ENTITY = registerJavelinEntity(
             "iron_javelin_projectile", Tiers.IRON
     );
@@ -78,13 +87,11 @@ public class ModEntities {
             "golden_javelin_projectile", Tiers.GOLD
     );
 
-    public static final RegistryObject<EntityType<JavelinEntity>> WOODEN_JAVELIN_ENTITY = registerJavelinEntity(
-            "wooden_javelin_projectile", Tiers.WOOD
+    public static final RegistryObject<EntityType<JavelinEntity>> DIAMOND_JAVELIN_ENTITY = registerJavelinEntity(
+            "diamond_javelin_projectile", Tiers.DIAMOND
     );
 
-    public static final RegistryObject<EntityType<JavelinEntity>> STONE_JAVELIN_ENTITY = registerJavelinEntity(
-            "stone_javelin_projectile", Tiers.STONE
-    );
+    //endregion
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

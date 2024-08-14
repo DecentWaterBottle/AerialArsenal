@@ -83,17 +83,24 @@ public class AerialArsenal
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
+            // Stone
             EntityRenderers.register(ModEntities.THROWABLE_STONE_ENTITY.get(), ThrownItemRenderer::new);
+
+            // Knife
             EntityRenderers.register(ModEntities.WOODEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.STONE_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.IRON_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.GOLDEN_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.DIAMOND_KNIFE_ENTITY.get(), KnifeRenderer::new);
             EntityRenderers.register(ModEntities.NETHERITE_KNIFE_ENTITY.get(), KnifeRenderer::new);
-            EntityRenderers.register(ModEntities.IRON_JAVELIN_ENTITY.get(), JavelinRenderer::new);
-            EntityRenderers.register(ModEntities.GOLDEN_JAVELIN_ENTITY.get(), JavelinRenderer::new);
+
+            // Javelin
             EntityRenderers.register(ModEntities.WOODEN_JAVELIN_ENTITY.get(), JavelinRenderer::new);
             EntityRenderers.register(ModEntities.STONE_JAVELIN_ENTITY.get(), JavelinRenderer::new);
+            EntityRenderers.register(ModEntities.IRON_JAVELIN_ENTITY.get(), JavelinRenderer::new);
+            EntityRenderers.register(ModEntities.GOLDEN_JAVELIN_ENTITY.get(), JavelinRenderer::new);
+            EntityRenderers.register(ModEntities.DIAMOND_JAVELIN_ENTITY.get(), JavelinRenderer::new);
         }
     }
 }

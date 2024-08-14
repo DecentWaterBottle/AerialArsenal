@@ -22,6 +22,8 @@ public class ModItems {
     public static final RegistryObject<Item> THROWABLE_STONE = ITEMS.register("throwable_stone",
             () -> new ThrowableStoneItem(new Item.Properties()));
 
+    // Knife
+
     public static final RegistryObject<Item> WOODEN_KNIFE = ITEMS.register("wooden_knife",
             () -> new KnifeItem(ModEntities.WOODEN_KNIFE_ENTITY, Tiers.WOOD, new Item.Properties().stacksTo(64), 2));
 
@@ -43,17 +45,23 @@ public class ModItems {
     public static final RegistryObject<Item> JAVELIN_SHAFT = ITEMS.register("javelin_shaft",
             () -> new Item( new Item.Properties()));
 
-    public static final RegistryObject<Item> IRON_JAVELIN = ITEMS.register("iron_javelin",
-            () -> new JavelinItem(ModEntities.IRON_JAVELIN_ENTITY, Tiers.IRON, new Item.Properties(), 4));
 
-    public static final RegistryObject<Item> GOLDEN_JAVELIN = ITEMS.register("golden_javelin",
-            () -> new JavelinItem(ModEntities.GOLDEN_JAVELIN_ENTITY, Tiers.GOLD, new Item.Properties(), 4));
+    // Javelin
 
     public static final RegistryObject<Item> WOODEN_JAVELIN = ITEMS.register("wooden_javelin",
             () -> new JavelinItem(ModEntities.WOODEN_JAVELIN_ENTITY, Tiers.WOOD, new Item.Properties(), 4));
 
     public static final RegistryObject<Item> STONE_JAVELIN = ITEMS.register("stone_javelin",
             () -> new JavelinItem(ModEntities.STONE_JAVELIN_ENTITY, Tiers.STONE, new Item.Properties(), 4));
+
+    public static final RegistryObject<Item> IRON_JAVELIN = ITEMS.register("iron_javelin",
+            () -> new JavelinItem(ModEntities.IRON_JAVELIN_ENTITY, Tiers.IRON, new Item.Properties(), 4));
+
+    public static final RegistryObject<Item> GOLDEN_JAVELIN = ITEMS.register("golden_javelin",
+            () -> new JavelinItem(ModEntities.GOLDEN_JAVELIN_ENTITY, Tiers.GOLD, new Item.Properties(), 4));
+
+    public static final RegistryObject<Item> DIAMOND_JAVELIN = ITEMS.register("diamond_javelin",
+            () -> new JavelinItem(ModEntities.DIAMOND_JAVELIN_ENTITY, Tiers.DIAMOND, new Item.Properties(), 4));
 
 
     public static void register(IEventBus eventBus) {

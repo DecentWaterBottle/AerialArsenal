@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "/",
+    "/"
+  ],
+  "key": {
+    "/": {
+      "item": "aerialarsenal:javelin_shaft"
+    },
+    "#": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "aerialarsenal:golden_javelin",
+    "count": 1
+  },
+  "show_notification": true
+}
